@@ -1,3 +1,10 @@
+import { ComicContainer, SajuContainer } from "@/features";
+
 export default function Home() {
-    return <div> hi</div>;
+    return (
+        <div className="max-w-md ">
+            <ComicContainer />
+            <SajuContainer />
+        </div>
+    );
 }

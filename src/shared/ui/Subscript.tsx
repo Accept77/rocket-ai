@@ -14,12 +14,17 @@ export default function Subscript({
     return (
         <div
             className={cn(
-                "flex flex-col text-xl text-block text-center",
-                small && "text-base"
+                "flex flex-col text-sm text-block text-center font-bold break-keep",
+                small && "text-xs"
             )}
         >
             {children}
-            <div className={cn("text-[10px] font-bold", small && "text-[8px]")}>
+            <div
+                className={cn(
+                    "text-[10px] font-bold break-keep",
+                    small && "text-[8px]"
+                )}
+            >
                 {subscript}
             </div>
         </div>

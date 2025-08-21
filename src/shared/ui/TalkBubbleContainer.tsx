@@ -23,7 +23,7 @@ export default function TalkBubbleContainer({
                         "pb-[calc(20%+2rem)] pt-[calc(12%+2rem)]"
                 )}
             >
-                <div className="text-center text-sm leading-relaxed break-words max-w-full overflow-hidden line-clamp-3">
+                <div className="text-center text-sm leading-relaxed break-words max-w-full overflow-hidden line-clamp-3 break-keep">
                     {children}
                 </div>
             </div>

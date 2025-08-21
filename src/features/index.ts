@@ -1,2 +1,2 @@
 export { default as ComicContainer } from "./comicContainer";
-export { default as SajuContainer } from "./SajuContainer";
+export { default as SajuCard } from "./SajuCard";

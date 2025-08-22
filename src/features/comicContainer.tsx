@@ -1,12 +1,20 @@
+import Image from "next/image";
 import { TalkBubbleContainer, GradientWrapper } from "@/shared";
-import { Comic1, Comic2Left, Comic2Right, Comic3 } from "@/shared/assets";
+import { Comic2Left } from "@/shared/assets";
 
 export default function ComicContainer() {
     return (
         <div className="flex flex-col gap-20 w-full h-full">
             <div className="relative">
                 <GradientWrapper>
-                    <Comic1 className="w-full h-full" />
+                    <Image
+                        src={"/images/comic1.png"}
+                        alt="Comic 1"
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-contain"
+                        priority
+                    />
                 </GradientWrapper>
                 <div className="absolute -bottom-[10%] left-6 max-w-[50%] max-h-[50%]">
                     <TalkBubbleContainer>
@@ -20,11 +28,23 @@ export default function ComicContainer() {
             </div>
             <div className="flex justify-between items-end">
                 <Comic2Left />
-                <Comic2Right />
+                <Image
+                    src={"/images/Comic2.png"}
+                    alt="Comic 2 Right"
+                    width={200}
+                    height={200}
+                    className="object-contain"
+                />
             </div>
             <div className="relative">
                 <GradientWrapper>
-                    <Comic3 className="w-full h-full" />
+                    <Image
+                        src={"/images/comic3.png"}
+                        alt="Comic 3"
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-contain"
+                    />
                 </GradientWrapper>
                 <div className="absolute -top-[30%] left-6 max-w-[50%] max-h-[50%]">
                     <TalkBubbleContainer direction="bottom">

@@ -29,8 +29,8 @@ export default function ComicContainer() {
             <div className="flex justify-between items-end">
                 <Comic2Left />
                 <Image
-                    src={"/images/Comic2.png"}
-                    alt="Comic 2 Right"
+                    src={"/images/comic2.png"}
+                    alt="Comic 2"
                     width={200}
                     height={200}
                     className="object-contain"

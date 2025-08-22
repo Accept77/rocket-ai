@@ -9,6 +9,7 @@ interface SajuTableContainerProps {
     children?: React.ReactNode;
     border?: ("left" | "right" | "top" | "bottom" | "all")[];
     gray?: ("left" | "right" | "top" | "bottom" | "all")[];
+    bold?: ("left" | "right" | "top" | "bottom" | "all")[];
     className?: string;
 }
 
@@ -42,6 +43,7 @@ function Container({
     border,
     gray,
     className,
+    bold,
 }: SajuTableContainerProps) {
     const borderClasses = cn(
         "p-1.5 box-border flex justify-center items-center border-black",
@@ -49,11 +51,19 @@ function Container({
         (border?.includes("right") || border?.includes("all")) && "border-r",
         (border?.includes("top") || border?.includes("all")) && "border-t",
         (border?.includes("bottom") || border?.includes("all")) && "border-b",
+
         gray?.includes("left") && "border-l-border-primary-thin",
         gray?.includes("right") && "border-r-border-primary-thin",
         gray?.includes("top") && "border-t-border-primary-thin",
         gray?.includes("bottom") && "border-b-border-primary-thin",
         gray?.includes("all") && "border-border-primary-thin",
+
+        bold?.includes("left") && "border-l-2",
+        bold?.includes("right") && "border-r-2",
+        bold?.includes("top") && "border-t-2",
+        bold?.includes("bottom") && "border-b-2",
+        bold?.includes("all") && "border-2",
+
         className
     );
 

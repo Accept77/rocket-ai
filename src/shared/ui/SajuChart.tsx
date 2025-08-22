@@ -18,6 +18,7 @@ interface SajuCellData {
     borderProps?: {
         border?: ("left" | "right" | "top" | "bottom" | "all")[];
         gray?: ("left" | "right" | "top" | "bottom" | "all")[];
+        bold?: ("left" | "right" | "top" | "bottom" | "all")[];
     };
     className?: string;
 }
@@ -55,7 +56,7 @@ const sajuTableData: SajuCellData[][] = [
         {
             type: "text",
             content: "年",
-            borderProps: { border: ["bottom", "right"] },
+            borderProps: { border: ["bottom", "right"], bold: ["right"] },
         },
     ],
     [
@@ -99,6 +100,7 @@ const sajuTableData: SajuCellData[][] = [
             subscript: "(상관)",
             borderProps: {
                 border: ["bottom", "right", "top"],
+                bold: ["right"],
             },
             className: "bg-white",
         },
@@ -156,6 +158,7 @@ const sajuTableData: SajuCellData[][] = [
             borderProps: {
                 border: ["bottom", "right", "top"],
                 gray: ["bottom"],
+                bold: ["right"],
             },
             className: "bg-white",
         },
@@ -212,6 +215,7 @@ const sajuTableData: SajuCellData[][] = [
             color: "white",
             borderProps: {
                 border: ["bottom", "right"],
+                bold: ["right"],
             },
             className: "bg-white",
         },
@@ -257,6 +261,7 @@ const sajuTableData: SajuCellData[][] = [
             subscript: "(편재)",
             borderProps: {
                 border: ["bottom", "right", "top"],
+                bold: ["right"],
             },
             className: "bg-white",
         },
@@ -302,6 +307,7 @@ const sajuTableData: SajuCellData[][] = [
             subscript: "(장생)",
             borderProps: {
                 border: ["bottom", "right", "top"],
+                bold: ["right"],
             },
             className: "bg-white",
         },
@@ -347,6 +353,7 @@ const sajuTableData: SajuCellData[][] = [
             subscript: "(장성살)",
             borderProps: {
                 border: ["bottom", "right", "top"],
+                bold: ["right"],
             },
             className: "bg-white",
         },
@@ -357,12 +364,16 @@ const sajuTableData: SajuCellData[][] = [
             content: "貴人",
             subscript: "(귀인)",
             small: true,
-            borderProps: { border: ["bottom", "right", "top"] },
+            borderProps: {
+                border: ["bottom", "right", "top"],
+                bold: ["bottom"],
+            },
         },
         {
             type: "small-text",
             content: "(없음)",
-            borderProps: { border: ["all"], gray: ["right"] },
+            borderProps: { border: ["all"], gray: ["right"], bold: ["bottom"] },
+
             className: "bg-white",
         },
         {
@@ -371,6 +382,7 @@ const sajuTableData: SajuCellData[][] = [
             borderProps: {
                 border: ["bottom", "right", "top"],
                 gray: ["right"],
+                bold: ["bottom"],
             },
             className: "bg-white",
         },
@@ -381,6 +393,7 @@ const sajuTableData: SajuCellData[][] = [
             borderProps: {
                 border: ["bottom", "right", "top"],
                 gray: ["right"],
+                bold: ["bottom"],
             },
             className: "bg-white",
         },
@@ -393,6 +406,7 @@ const sajuTableData: SajuCellData[][] = [
             ],
             borderProps: {
                 border: ["bottom", "right", "top"],
+                bold: ["right", "bottom"],
             },
             className: "bg-white",
         },
@@ -417,6 +431,7 @@ const renderCell = (cellData: SajuCellData, index: number) => {
             key={index}
             border={borderProps?.border}
             gray={borderProps?.gray}
+            bold={borderProps?.bold}
             className={className}
         >
             {(() => {
